@@ -67,6 +67,7 @@ spec:
         imagePullPolicy: {{ .Values.image.imagePullPolicy | quote }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.lifecycle | indent 8 }}
         env:
         - name: ARTEMIS_PASSWORD
           valueFrom:
